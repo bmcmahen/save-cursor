@@ -1,0 +1,14 @@
+{
+  "name": "save-cursor",
+  "repo": "bmcmahen/save-cursor",
+  "description": "save and restore the cursor or selection",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ]
+}
