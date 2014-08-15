@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+<article>
+  <div id='content' contenteditable='true'>
+    <p>hello world</p>
+    <p><br> </p>
+    <p><br> </p>
+    <p>Another paragraph</p>
+  </div>
+</article>
+<button id='setrange'> restore range </button>
+<button id='getrange'> save range </button>
+<script src='build/build.js'></script>
+<script>
+var cursor = require('save-cursor');
+var el = document.getElementById('content');
+
+var r = null;
+
+document.getElementById('setrange').onclick = function(){
+  if (r) {
+    cursor.restore(r);
+  }
+};
+
+document.getElementById('getrange').onclick = function(){
+  r = cursor.save();
+};
+</script>
+</body>
+</html>

@@ -1,24 +1,21 @@
-var selection = window.getSelection();
+var selection = window.getSelection;
 
 /**
  * save cursor pos/selection
  */
 
 exports.save = function(){
-  if (selection.getRangeAt && selection.rangeCount){
-   exports.savedRange = selection.getRangeAt(0);   
-  }
+  return selection().getRangeAt(0);
 };
 
 /**
  * restore cursor pos/selection
  */
 
-exports.restore = function(){
-  if (exports.savedRange){
-    selection.removeAllRanges();
-    selection.addRange(exports.savedRange);
-  }
+exports.restore = function(range){
+  var s = selection();
+  s.removeAllRanges();
+  s.addRange(range);
 };
 
 module.exports = exports;

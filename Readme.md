@@ -9,8 +9,17 @@
 
     $ component install bmcmahen/save-cursor
 
-## API
+## Usage
 
+```javascript
+var cursor = require('save-cursor');
+
+// save cursor
+var range = cursor.save();
+
+// restore cursor
+cursor.restore(range);
+```
 
 
 ## License
